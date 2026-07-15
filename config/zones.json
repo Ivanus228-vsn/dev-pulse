@@ -1,0 +1,51 @@
+{
+  "_doc": "Пороги зон светофора. Меняйте ТОЛЬКО числа и enabled/note — структуру не трогайте. Как это работает — в config/README.md",
+
+  "metrics": {
+    "lead_time": {
+      "enabled": true,
+      "label": "Lead Time истории (дни)",
+      "direction": "lower_better",
+      "green_max": 14,
+      "yellow_max": 21,
+      "note": "цель 14 / норма 21 — из Базы знаний, официально НЕ подтверждено Димой"
+    },
+    "ttm": {
+      "enabled": true,
+      "label": "Time-to-Market эпика (дни)",
+      "direction": "lower_better",
+      "green_max": 57,
+      "yellow_max": 75,
+      "note": "ПРОВИЗОРНО: историческое среднее ~49-57 дн; уточнить методологию"
+    },
+    "predictability": {
+      "enabled": false,
+      "label": "Предсказуемость квартала (%)",
+      "direction": "higher_better",
+      "green_min": 80,
+      "yellow_min": 60,
+      "interpretation": "done_total_over_label",
+      "note": "ВЫКЛЮЧЕНА пока: формула не зафиксирована командой + в начале квартала значение ~0 у всех. Включите (enabled=true), когда утвердят методологию"
+    },
+    "data_quality": {
+      "enabled": false,
+      "label": "Чистота данных (%)",
+      "direction": "higher_better",
+      "green_min": 90,
+      "yellow_min": 70,
+      "note": "ВЫКЛЮЧЕНА (enabled=false): подсистема расчёта не готова. Включите, когда появится расчёт"
+    }
+  },
+
+  "team_health": {
+    "_doc": "Цвет команды при 'провалиться' — по темпу спринта: закрыто% / прошло_времени%.",
+    "green_ratio": 0.9,
+    "yellow_ratio": 0.7,
+    "note": "≥0.9 идёт по плану 🟢, ≥0.7 отстаёт 🟡, меньше — 🔴"
+  },
+
+  "overrides_by_scope": {
+    "_doc": "Кастомные целевые значения по подразделению. Перебивают общие пороги. Пример ниже (пустой = используются общие).",
+    "AIHUB": {}
+  }
+}

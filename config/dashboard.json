@@ -1,0 +1,12 @@
+{
+  "_doc": "Какие стримы (проекты Jira) показывать на дэшборде. Добавляйте/убирайте ключи проектов. label — как назвать в интерфейсе.",
+  "streams": [
+    {"project": "AIHUB", "label": "AI HUB"},
+    {"project": "CMASSORT", "label": "Ассортимент"},
+    {"project": "OPERSTORE", "label": "Операции · Магазин"},
+    {"project": "LOGBISCM", "label": "Логистика · SCM"},
+    {"project": "HRDIGRECR", "label": "HR · Digital Recruitment"}
+  ],
+  "title": "Dev Pulse — Светофор стримов",
+  "note_prototype": "Прототип v0.1 на реальных данных. Пороги провизорные (config/zones.json)."
+}

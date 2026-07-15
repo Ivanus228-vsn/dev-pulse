@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dev Pulse — Светофор</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="layout">
+  <aside class="side">
+    <div class="side-hd">
+      <div class="brand"><span class="lamp"><i class="d-red"></i><i class="d-amber"></i><i class="d-green"></i></span>Dev&nbsp;Pulse</div>
+      <div class="side-sub" id="sideSub">…</div>
+    </div>
+    <input type="search" id="q" placeholder="Поиск стрима…" autocomplete="off">
+    <div class="side-list" id="streamList"><div class="loading">Загрузка стримов…</div></div>
+  </aside>
+  <main class="main">
+    <div class="crumbs" id="crumbs"></div>
+    <div id="app"><div class="loading">Загрузка…</div></div>
+    <footer id="foot"></footer>
+  </main>
+</div>
+<script src="/static/app.js"></script>
+</body>
+</html>

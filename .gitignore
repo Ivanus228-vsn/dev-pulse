@@ -1,0 +1,13 @@
+.env
+sessions.json
+__pycache__/
+*.pyc
+subscriptions.json
+digest_state.json
+*.log
+webapp/cache/
+dashboard.html
+confluence_dump/
+CONTEXT_confluence.md
+.DS_Store
+.claude/
